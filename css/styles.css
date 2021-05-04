@@ -1,0 +1,77 @@
+.container{
+    display: grid;
+    height: 1vh;
+    /*grid-template-rows: 2fr 1fr 1fr 1fr;*/
+    grid-column: 1fr 1fr 1fr;
+    grid-template-areas: "nav nav nav" 
+                        "banner banner banner" 
+                        "speed stamina power" 
+                        "footer footer footer";
+    grid-gap: 10px;
+    
+}
+nav, .banner-content, nav, .speed, .stamina, .power, footer{
+    border: 1px solid red;
+   
+}
+/** NAV **/
+nav{
+    grid-area: nav;
+    text-align: center;
+    
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 5%;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+#logo{
+    max-width: 100px;
+    max-height: 100px;
+    position: relative;
+    top: 30px;
+}
+/** BANNER **/
+.banner{
+    background-image: url(/images/alison-courtney-NeZSCdi44AI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+.banner-content{
+    grid-area: banner;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-content{
+    text-align: center;
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+/** SPEED SECTION **/
+.speed{
+    grid-area: speed;
+}
+
+/** STAMINA SECTION **/
+.stamina{
+    grid-area: stamina;
+}
+
+/** POWER SECTION **/
+.power{
+    grid-area: power;
+}
+
+footer{
+    grid-area: footer;
+}
