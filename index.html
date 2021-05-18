@@ -9,42 +9,106 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="banner">
+    <header>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Events</li>
-                <img id="logo" src="./images/swimming-icon-png-3749.png" alt="swim logo">
-                <li>About Us</li>
-                <li>Join Us</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><img id="logo" src="./images/swimming-icon-png-3749.png" alt=""></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contactUs">Contact Us</a></li>
             </ul>
-    
         </nav>
     
-        <div class="banner-content">
-            <div class="inner-content">
-                <h2>Racing Edge Swim Club</h2>
-                <p>A competitive swimming club for the best!</p>
+    </header>
+    <section id="home" class="banner">
+        <div class="video-container">
+            <video playsinline autoplay muted loop src="videos/swim-video.mp4" type="video/mp4"></video>
+        </div>
+
+        <div class="video-overlay">
+            <div class="video-overlay-text">
+                <h1>Racing Edge Swim Club</h1>
+                <p>Where hard work, beats talent!</p>
             </div>
         </div>
+
+        <div class="responsive-banner">
+            <div class="responsive-banner-text">
+                <h1>Racing Edge Swim Club</h1>
+                <p>Where hard work, beats talent!</p>
+            </div>
+        </div>
+    </section>
+    <div>
+        
     </div>
-    
+    <section id="aboutUs" class="left">
+        <div class="left-img">
+        </div>
+    </section>
 
-    <main class="container">
-        <section class="speed">
-            <h2>Speed</h2>
-        </section>
-        <section class="stamina">
-            <h2>Stamina</h2>
+    <section class="right">
+        <h2>Swimming through your limits</h2>
+        <p>Here at Racing Edge Swim Club, we push you to the limit. We provide you the training. You provide us with your best. </p>
+    </section>
+
+    <section class="aboutUs">
+        
+        <h2>About Us</h2>
+        <p>Racing Edge Swim Club is a highly competitive swim team with a family-like 
+            atmoshphere. The goal of our team is to provide every swimmer an opportunity to improve swimming skills and achieve success at their own personal level of ability from novice to international competitor. 
+            Our coaches believe swimmers who are trained with personal attention and cutting edge technique,
+            become athletes who are equipped to compete at the highest level. We are a yearly round swim club providing you with our own pool and gym. All you have to do is be here and stay commited! </p>
+    </section>
+
+    <section id="events" class="race-banner">
+        <div class="race-img">
+        </div>
+    </section>
+
+    <section class="events">
+        <h2 class="events-heading">Events</h2>
+        <p>
+            These are the upcoming swim meets this year. Please come and support us!
+        </p>
+
+        <div class="box-container">
+            <div class="date-box">
+                <h2 class="date-month">June</h2>
+                <h3 class="date-day">13</h3>
+                <h3 class="date-year">2021</h3>
+                <h3 class="meets" > SWIM MEET #1</h3>
+            </div>
             
-        </section>
-        <section class="power">
-            <h2>Power</h2>
-        </section>
+            <div class="date-box">
+                <h2 class="date-month">July</h2>
+                <h3 class="date-day">5</h3>
+                <h3 class="date-year">2021</h3>
+                <h3 class="meets"> SWIM MEET #2</h3>
+            </div>
 
-        <footer>
-            <h2>Footer</h2>
-        </footer>
-    </main>
+            <div class="date-box">
+                <h2 class="date-month">August</h2>
+                <h3 class="date-day">1</h3>
+                <h3 class="date-year">2021</h3>
+                <h3 class="meets"> SWIM MEET #3</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="fly-banner">
+        <div class="fly-img">
+        </div>
+    </section>
+
+    <section id="contactUs" class="contactUs">
+        <h2>Contact Us</h2>
+        <p>Have any questions? Want to sign up? Give us a call or email. We'd love to hear from you!</p>
+        <p>Phone: (123)456-7890</p>
+        <p>Email: racingedgeswim@gmail.com</p>
+    </section>
+
+   
 </body>
 </html>

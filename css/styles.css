@@ -1,77 +1,314 @@
-.container{
+body{
     display: grid;
-    height: 1vh;
-    /*grid-template-rows: 2fr 1fr 1fr 1fr;*/
-    grid-column: 1fr 1fr 1fr;
-    grid-template-areas: "nav nav nav" 
-                        "banner banner banner" 
-                        "speed stamina power" 
-                        "footer footer footer";
-    grid-gap: 10px;
-    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header header header"
+                "banner banner banner"
+                "left left right"
+                "aboutUs aboutUs aboutUs"
+                "race-banner race-banner race-banner"
+                "events events events"
+                "fly-banner fly-banner fly-banner"
+                "contactUs contactUs contactUs";
 }
-nav, .banner-content, nav, .speed, .stamina, .power, footer{
-    border: 1px solid red;
-   
-}
-/** NAV **/
-nav{
-    grid-area: nav;
+/**HEADER**/
+header{
+    grid-area: header;
+    background-color: white;
     text-align: center;
+    width: 100%;
+    z-index: 2;
+    position: fixed;
     
 }
 
-ul li {
-    display: inline-block;
-    margin: 0 5%;
-    font-family: sans-serif;
-    font-weight: 600;
-    font-size: 2rem;
-}
+  li a:hover {
+    color: gold;
+  }
 
-#logo{
-    max-width: 100px;
-    max-height: 100px;
-    position: relative;
-    top: 30px;
-}
-/** BANNER **/
-.banner{
-    background-image: url(/images/alison-courtney-NeZSCdi44AI-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-    
-}
-.banner-content{
-    grid-area: banner;
-    height: 800px;
+nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.inner-content{
+nav ul li{
+    padding: 15px 25px;
+    font-size: 24px;
+    
+}
+
+li a{
+    color: #b30000;
+
+}
+#logo{
+    height: 50px;
+    width: 50px;
+}
+/**BANNER**/
+.banner{
+    grid-area: banner;
+    padding: 0;
+    margin: 0;
+}
+
+/**LEFT**/
+.left{
+    grid-area: left;
+    height: 500px;
+    
+}
+.left-img{
+    background-image: url(../images/tuxpi.com.1620158931.jpg);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/**RIGHT**/
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-area: right;
     text-align: center;
-    font-size: 3rem;
-    font-family: sans-serif;
+}
+
+.right h2{
+    font-size: 34px;
+    text-transform: uppercase;
+    color: #b30000;
+}
+.right p{
+    font-size: 24px;
+    padding-top: 5px;
+}
+
+/** ABOUT US **/
+.aboutUs{
+    grid-area: aboutUs;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding:  40px 20%;
+}
+
+.aboutUs h2{
+    font-size: 44px;
+    padding-bottom: 20px;
+    color: #b30000;
+}
+.aboutUs p{
+    font-size: 24px;
+    line-height: 2.0;
+}
+
+/** RACE BANNER**/
+.race-banner{
+    grid-area: race-banner;
+    width: 100%;
+    height: 500px;
+}
+.race-img{
+    background-image: url(../images/swim-race.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/** EVENTS **/
+.events{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding:  40px 20%;
+    grid-area: events;
+}
+.events-heading{
+    font-size: 44px;
+    padding-bottom: 22px;
+    color: #b30000;
+    
+}
+.events p{
+    font-size: 24px;
+    line-height: 2.0;
+}
+
+.box-container{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.date-box{
+    border: 1px solid rgb(104, 102, 102);
+    width: 150px;
+    height: 170px;
+}
+
+.date-month{
+    border-bottom: 1px solid rgb(104, 102, 102);
+    background-color: #5CA7DE;
+    font-size: 24px;
     font-weight: 800;
+    padding: 10px;
+    color: white;
+}
+.date-day{
+    font-size: 30px;
+    color: red;
+    font-weight: 800;
+    padding: 5px;
+}
+.date-year, .meets{
+    font-size: 18px;
+    font-weight: 800;
+    padding: 5px;
+}
+/** FLY BANNER **/
+.fly-banner{
+    grid-area: fly-banner;
+    width: 100%;
+    height: 500px;
+}
+.fly-img{
+    background-image: url(../images/fly.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-/** SPEED SECTION **/
-.speed{
-    grid-area: speed;
+/** CONTACT US **/
+.contactUs{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding:  40px 20%;
+    grid-area: contactUs;
 }
 
-/** STAMINA SECTION **/
-.stamina{
-    grid-area: stamina;
+.contactUs h2{
+    font-size: 44px;
+    padding-bottom: 22px;
+    color: #b30000;
 }
 
-/** POWER SECTION **/
-.power{
-    grid-area: power;
+.contactUs p{
+    font-size: 24px;
+    line-height: 2.0;
 }
 
-footer{
-    grid-area: footer;
+
+
+@media only screen and (min-width: 950px){
+    .banner video{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .video-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        flex-shrink: inherit;
+    }
+    
+    .video-overlay-text{
+        font-size: 6rem;
+        color: white;
+        text-align: center;
+        font-weight: 800;
+        background-color: #f3f1f1b0;
+        border-radius: 5px;
+        color: #b30000;
+    }
+    .video-overlay-text p{
+        font-size: 2rem;
+        color: #b30000;
+        text-align: center;
+        padding-top: 10px;
+        
+    }
+
+    .responsive-banner{
+        display: none;
+        visibility: none;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    video ,.video-overlay-text, .video-overlay{
+        display: none;
+        visibility: hidden;
+    }
+
+    .responsive-banner{
+        background-image: url(../images/alison-courtney-NeZSCdi44AI-unsplash.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .responsive-banner-text{
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        font-weight: 800;
+        background-color: rgba(243, 241, 241, 0.692);
+        border-radius: 5px;
+        color: #b30000;
+    }
+
+    .responsive-banner-text p{
+        font-size: 18px;
+        color: #b30000;
+        text-align: center;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "header header header"
+                "banner banner banner"
+                "left left left"
+                "right right right"
+                "aboutUs aboutUs aboutUs"
+                "race-banner race-banner race-banner"
+                "events events events"
+                "fly-banner fly-banner fly-banner"
+                "contactUs contactUs contactUs";
+    }
+
+    .date-box{
+        margin: 15px;
+    }
+    .meets{
+        width: 80px;
+    }
 }
