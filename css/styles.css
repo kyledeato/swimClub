@@ -1,5 +1,6 @@
 body{
     display: grid;
+    grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "header header header"
                 "banner banner banner"
@@ -46,6 +47,16 @@ li a{
     width: 50px;
 }
 /**BANNER**/
+.responsive-banner{
+    background-image: url(../images/alison-courtney-NeZSCdi44AI-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .banner{
     grid-area: banner;
     padding: 0;
@@ -217,53 +228,28 @@ li a{
 
 
 @media only screen and (min-width: 950px){
-    .banner video{
-        max-width: 100%;
-        max-height: 100%;
-    }
-    
-    .video-overlay{
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        flex-shrink: inherit;
-    }
-    
-    .video-overlay-text{
-        font-size: 6rem;
+    .responsive-banner-text{
+        font-size: 50px;
         color: white;
         text-align: center;
         font-weight: 800;
-        background-color: #f3f1f1b0;
+        background-color: rgba(243, 241, 241, 0.692);
         border-radius: 5px;
         color: #b30000;
     }
-    .video-overlay-text p{
-        font-size: 2rem;
+    .responsive-banner-text p{
+        font-size: 18px;
         color: #b30000;
         text-align: center;
-        padding-top: 10px;
-        
-    }
-
-    .responsive-banner{
-        display: none;
-        visibility: none;
     }
 }
-
-@media only screen and (max-width: 950px){
-    video ,.video-overlay-text, .video-overlay{
-        display: none;
-        visibility: hidden;
+@media only screen and (max-width: 500px){
+    header ul li{
+        font-size: 10px;
     }
-
+}
+@media only screen and (max-width: 950px){
+    
     .responsive-banner{
         background-image: url(../images/alison-courtney-NeZSCdi44AI-unsplash.jpg);
         background-position: center;
